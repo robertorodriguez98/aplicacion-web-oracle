@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% block titulo %}Consulta a la base de datos{% endblock %}
+{% block titulo2 %}Consulta a la base de datos{% endblock %}
+{% block titulo3 %}Consulta a la base de datos{% endblock %}
+{% block contenido %}
+<div class="posts">
+    <p>
+        <table>
+            <tbody>
+                {% for elem in res: -%}
+                    <tr>
+                        {% for linea in elem: -%}
+                        <td>{{linea}}</td>
+                        {% endfor -%}
+                    </tr>
+                {% endfor -%}
+            </tbody>
+        </table>
+    </p>
+</div>
+{% endblock %}
